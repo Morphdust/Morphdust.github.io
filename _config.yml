@@ -250,6 +250,15 @@ defaults:
       author_profile: true
       share: true
       comments: true
+# _repair-log
+  - scope:
+      path: ""
+      type: repair-log
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
   # _portfolio
   - scope:
       path: ""
