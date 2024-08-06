@@ -13,7 +13,7 @@ main:
     url: /portfolio/
         
   - title: "Repair Log"
-    url: /repair-log/
+    url: /repair/
     
   - title: "CV"
     url: /cv/
