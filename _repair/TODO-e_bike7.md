@@ -1,0 +1,35 @@
+---
+title: "Shredded gears with your e-bike sir?"
+collection: repair
+permalink: /repair/TODO-e_bike
+venue: "Sparks Repair Cafe"
+Problem: "Shredded planetary gears"
+Solution: "Replace gearbox and bearings "
+---
+```
+Problem:    Shredded planetary gears 
+Solution:   Replace gearbox and bearings  
+Brand:  Unbranded 
+Cost new:   £800 
+Cost of fix:    £25.00 
+Age:    TODO 
+Success?:   Yes 
+```
+We had this e-bike that was donated to the repair cafe, that no longer worked and the person involved didn’t want it back as they had an upgrade and had been told it was unfixable. Bit of diagnosing later, as I could get the motor to spin with the throttle, but the wheel itself would stop and start and stutter, which didn’t make much sense. I knew that the battery was fine as I could test the voltage on that, and as it’s a brushless motor and controller, it didn’t make much sense why the wheel would stop/start/stop, so seemed more of a mechanical issue. So I removed the whole motor connectors and opened the housing for the in-wheel motor. Inside the housing was a disgusting mix of black grease, along with the remains of the nylon planetary gears that had been absolutely shredded to the extent that they were basically smooth around 2/3 of the gear face! This made sense why the wheel would spin for a little bit and then stop! When I was re-assembling the motor housing I found out why the gears had shredded themselves to bits however! The bearings for the motor were totally seized and would not budge in the slightest!! So the motor and gearbox would have been straining against seized bearings which would allow a bit of movement and then stop, which is most likely why the gears got shredded. Bought a bunch of new bearings and pressed those in happily. Then I had to source a replacement planetary gear set and re-grease it and assemble which all was possible and found the exact match of nylon pair and flooded the gearbox with a bunch of high temp grease and it works like a dream. I still get messages from the person who eventually got it who is very happy with it and has no issues
+![](/images/repair_cafe/e-bike/e-bike_1.jpg)
+![](/images/repair_cafe/e-bike/e-bike_14.jpg)
+![](/images/repair_cafe/e-bike/e-bike_8.jpg)
+![](/images/repair_cafe/e-bike/e-bike_15.jpg)
+![](/images/repair_cafe/e-bike/e-bike_9.jpg)
+![](/images/repair_cafe/e-bike/e-bike_5.jpg)
+![](/images/repair_cafe/e-bike/e-bike_6.jpg)
+![](/images/repair_cafe/e-bike/e-bike_16.jpg)
+![](/images/repair_cafe/e-bike/e-bike_4.jpg)
+![](/images/repair_cafe/e-bike/e-bike_17.jpg)
+![](/images/repair_cafe/e-bike/e-bike_12.jpg)
+![](/images/repair_cafe/e-bike/e-bike_3.jpg)
+![](/images/repair_cafe/e-bike/e-bike_10.jpg)
+![](/images/repair_cafe/e-bike/e-bike_7.jpg)
+![](/images/repair_cafe/e-bike/e-bike_2.jpg)
+![](/images/repair_cafe/e-bike/e-bike_11.jpg)
+![](/images/repair_cafe/e-bike/e-bike_13.jpg)

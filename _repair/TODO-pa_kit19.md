@@ -1,0 +1,22 @@
+---
+title: "PA Kit"
+collection: repair
+permalink: /repair/TODO-pa_kit
+venue: "Sparks Repair Cafe"
+Problem: "Went bang!"
+Solution: "Replace drivers and board components"
+---
+```
+Problem:    Went bang! 
+Solution:   Replace drivers and board components 
+Brand:  QTX Sound 
+Cost new:   £600.00 
+Cost of fix:    £118.28 
+Age:    TODO 
+Success?:   Yes 
+```
+Guys came in with a PA set that had been plugged in when the bassist incorrectly wired up one of their pedals/amplifiers, then there was an awful sound and a disgusting smell, according to them. Had a cursory look at the PA deck, to make sure nothing was wrong there and didn’t see anything immediately broken. Open the speaker cabs and look at the pre-filters and the 20W resistor as part of the RLC filter had gotten so hot the legs had exploded out of both speakers! The thermal fuse on both boards inside the speakers had exploded and released their magic smoke. One of the cones sounded pretty damaged, my rubric for that being if you push in on one of the cones and hear a ‘crinkly’ sound, like a crisp packet being rustled, the driver is damaged. One speaker cone sounded exactly like that, and the other one sounded similar bit not as bad. I asked the people who brought them in, and they were happy to replace both of them at the same time so they’d sound close to similar. A colleague contacted the speaker manufacturer and suggested a replacement driver, so sourced that. Then purchased replacement components for the board and re-soldered the new ones on – sourced from https://willys-hifi.com which was a great site for this. Nice and easy fix, if a little expensive for the customers.
+![](/images/repair_cafe/PA_speakers/PA_speakers_9.jpg)
+![](/images/repair_cafe/PA_speakers/PA_speakers_10.jpg)
+![](/images/repair_cafe/PA_speakers/PA_speakers_12.jpg)
+![](/images/repair_cafe/PA_speakers/PA_speakers_17.jpg)
