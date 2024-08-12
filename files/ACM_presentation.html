@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="reveal-full-page ntcwkl idc0_350"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="ACM_presentation_files/reset.css">
+		<link rel="stylesheet" href="ACM_presentation_files/reveal.css">
+		<link rel="stylesheet" href="ACM_presentation_files/dracula.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="ACM_presentation_files/monokai.css">
+	<script type="text/javascript" src="ACM_presentation_files/customElements.js" class="__REQUESTLY__SCRIPT"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+	<body class="reveal-viewport" style="--slide-scale: 1.3275428571428571; --viewport-width: 1848px; --viewport-height: 968px; --slide-width: 960px; --slide-height: 700px;">
+		<div class="reveal slide center focused has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade" style="cursor: none;">
+			<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(1.32754);">
+				<section data-charset="iso-8859-15" style="top: 47px; display: block;" data-markdown="" data-markdown-parsed="true" class="present"><h3 id="collective-anomaly-perception-during-multi-robot-patrol">Collective Anomaly Perception During Multi-Robot Patrol:</h3>
+<h3 id="constrained-interactions-can-promote-accurate-consensus">Constrained Interactions Can Promote Accurate Consensus</h3>
+<p>Zachary R. Madin - Jonathan Lawry - Edmund R. Hunt</p>
+<p>University of Bristol</p>
+<p>9th April 2024 - 2024 ACM/SIGAPP</p>
+<aside class="notes"><p>Hello all I'm Zachary Madin, the main author on 
+the paper entitled Collective Anomaly Perception During Multi-Robot 
+Patrol: Constrained Interactions Can Promote Accurate Consensus. I'll 
+give a brief overview of the paper and our findings, as well as the 
+limitations and what we are working on next to examine some of those. 
+Then I'll be happy to take any questions you may have.</p>
+</aside></section><section data-charset="iso-8859-15" style="top: 47.5px; display: block;" data-markdown="" data-markdown-parsed="true" class="future" hidden="" aria-hidden="true"><h2 id="motivation">Motivation</h2>
+<div id="left">
+
+<ul>
+<li><p>Large search area</p>
+</li>
+<li><p>Multiple Agents</p>
+</li>
+<li><p>Listening device</p>
+</li>
+<li><p>Consensus of detection</p>
+</li>
+<li><p>Compare existing algorithms at collective perception</p>
+</li>
+</ul>
+</div>
+<div id="right">
+
+<img src="ACM_presentation_files/lora_module.jpg" alt="" width="400" title="[1]">
+<sup>[3]</sup>
+</div>
+
+<aside class="notes"><p>So first, a little bit of motivation for the 
+investigation. Let us imagine the scenario where we have an office 
+environment, and there is an unexpected anomaly somewhere. This could be
+ an intruder, or it could be a radio frequency device listening in and 
+broadcasting information out. The job of the agents is to find the 
+anomaly in this large area and reach a consensus of where it is. This 
+could be solved by having agents patrol the area looking for the 
+anomaly.</p>
+</aside></section><section data-charset="iso-8859-15" style="top: 0px; display: block;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true"><section data-markdown="" data-markdown-parsed="true" style="top: 99.5px; display: block;" class="" aria-hidden="true"><h2 id="background">Background</h2>
+<ul>
+<li><p>Formulation of problem</p>
+</li>
+<li><p>Abstract map into a graph</p>
+</li>
+<li><p>Patrol algorithms minimize idleness</p>
+</li>
+<li><p>Patrolling Sim</p>
+</li>
+<li><p>Collective belief system</p>
+</li>
+</ul>
+<aside class="notes"><p>Often in the literature the patrol problem is 
+decomposed into a task allocation problem. We have an area, we split it 
+up into regions and create a node graph out of those regions. Then it's a
+ Travelling Salesman problem, but for a weakly connected graph that does
+ not lend itself well to Hamiltonian decomposition.
+One thing to note about these approaches, is that they assume the 
+patrolling problem is 'solved' by minimizing the time since a node was 
+last visited.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 1.5px; display: none;" hidden=""><h2 id="patrol-map">Patrol Map</h2>
+<p><img src="ACM_presentation_files/cumberland.png" alt=""></p>
+<aside class="notes"><p>So given a map of where we have to patrol, it 
+needs to be abstracted into a graph for the agents to navigate. This is 
+often performed by approximate Voronoi partitioning and you end up with 
+something like this</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 6px; display: none;" hidden=""><h2 id="map-to-graph">Map to Graph</h2>
+<p><img src="ACM_presentation_files/cumberland-graph.png" alt=""></p>
+<aside class="notes"><p>So now you have a graph with vertices and edges 
+to patrol, and it becomes a task allocation problem! You just ensure 
+that each node is frequently visited and you solve it. Unsurprisingly 
+this isn't a simple problem and there are many approaches:</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="algorithms">Algorithms</h2>
+<p><img src="ACM_presentation_files/algorithms_examined.png" alt=""></p>
+<aside class="notes"><p>In this paper, we examine ten of the leading 
+algorithms presented in a simulation package that all attempt to solve 
+the problem in slightly different ways. The formulation of the problem 
+in this way aims to solve patrolling, by reducing the amount of time 
+since an agent last visited a node. I'm not going to go through all of 
+them but I will highlight some of the leading algorithms for minimizing 
+idleness on a graph, that's DTAG, SEBS and CBLS.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="agent-belief-system">Agent Belief System</h2>
+<div id="right">
+
+<img src="ACM_presentation_files/belief_exchange.png" alt="" width="500">
+
+</div>
+<div id="left">
+
+<ul>
+<li>World ternary belief <small>[2]</small></li>
+<li>Simple measurement model</li>
+<li>Communication via pairwise comparison</li>
+<li>Convergence to steady state</li></ul></div>
+<aside class="notes"><p>So now we have the algorithms by which the 
+agents are going to patrol, we need to establish a belief system that 
+they can measure and communicate information about the world. For this 
+work we used a ternary belief system, where the state of a node on the 
+graph is either true, false or uncertain. Each agent begins their patrol
+ being uncertain about every node, and as they visit nodes they gain new
+ information. Either true for an anomaly being detected, or false for no
+ anomaly being detected. Upon visiting a node, an agent takes a simple 
+'measurement' which consists of polling the node given a specified 
+chance of making an incorrect reading. Over time, the system reaches a 
+convergence on what a majority of the agents believe about the world.</p>
+</aside>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="agent-communication">Agent Communication</h2>
+<div id="right">
+
+<img src="ACM_presentation_files/belief_exchange.png" alt="" height="300">
+
+</div>
+
+<div id="left">
+
+<ul>
+<li>World belief</li>
+<li>Communication Range</li>
+<li>Communication Timeout</li>
+<li>Resultant Social Network<p class="aligncenter">
+ <img src="ACM_presentation_files/footprint_comm_radius.png" width="300">
+</p>
+<style>
+.aligncenter {
+ text-align: center;
+}
+</style>
+<aside class="notes"><p>For agents to take advantage of the collective 
+perception, they need to be able to communicate. Each agent has a 
+maximum communication range, and a communication timeout period, whereby
+ once an agent has communicated with another agent, they cannot talk to 
+one another after some set period. Here the benefit of the ternary 
+belief state comes into play, where on the right we have the truth table
+ for the beliefs. Two conflicting opinions of false and true, result in 
+both agents coming out of that communication event being uncertain about
+ that node. This is performed for each node in the world between the two
+ agents communicating.</p>
+</aside></li>
+</ul>
+</div></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="simulator-1">Simulator <small>[1]</small></h2><small>
+<img src="ACM_presentation_files/patrolling_sim.png" alt="drawing" width="700">
+<aside class="notes"><p>For the work in this paper we use an existing 
+simulator called Patrolling Sim. It is a ROS-based simulator that uses a
+ 2.5D world to simulate the kinematics of agents travelling in a world, 
+with the previously listed algorithms and belief systems implemented.</p>
+</aside></small></section></section><section data-charset="iso-8859-15" style="top: 114px; display: none;" data-markdown="" data-markdown-parsed="true" class="future" hidden="" aria-hidden="true"><h2 id="experimental-set-up">Experimental Set Up</h2>
+<div id="left">
+
+<ul>
+<li>'Patrolling sim' simulator</li>
+<li>Ternary belief state</li>
+<li>Algorithms to test</li>
+<li>8 Agents </li>
+<li><em>Cumberland</em> map</li>
+<li>F<sub>1</sub>-score metric</li></ul></div>
+
+<div id="right">
+
+<img src="ACM_presentation_files/experiment_parameters.png" alt="" width="1100">
+</div>
+<aside class="notes"><p>We set a series of parameters for the results we
+ were collecting, which I'm briefly going to cover.
+The communication range, set as a tenth of the map distance. The timeout
+ period set as the average amount of time to travel from node to another
+ node. Number of agents, as this was the largest number of agents 
+possible to run on the map before they suffered from performance 
+reduction due to collisions. and then each experiment ran for an hour, 
+with 0, 5, 10 and 20% chance of noise in measuring a node. Each 
+combination of algorithm and noise value was performed 20 times in order
+ to take an average.</p>
+</aside></section><section data-charset="iso-8859-15" style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true"><section data-markdown="" data-markdown-parsed="true" style="top: 171.5px; display: none;" class="past" hidden="" aria-hidden="true"><h2 id="results">Results</h2>
+<ul>
+<li>Algebraic Connectivity</li>
+<li>Footprint patterns</li>
+<li>F<sub>1</sub>-score</li>
+<li>Average False and True Positives<aside class="notes"><p>So now we 
+come to the results that we found after running each of the algorithms 
+under the given conditions. I will talk about how 'connected' the agents
+ were by looking at the algebraic connectivity of their social network, 
+if I have time I'll play a video of a series of the algorithms to get a 
+sense of their behaviour, I'll show the F-score performance (which is a 
+measure of how accurate the system was compared to the true world) for 
+each algorithm, as well as the average idleness for the algorithms to 
+give a sense of the performance at each rubric. and then I'll talk about
+ their performance of True positives and False positives.</p>
+</aside></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="past" style="top: 0px; display: none;" hidden="" aria-hidden="true"><h2 id="social-network">Social Network</h2>
+<img src="ACM_presentation_files/HCR_social_network.png" alt="drawing" width="500">
+<aside class="notes"><p>So in order to judge how connected the networks 
+are, the communication events between each agents are logged. Each node 
+on this graph is a unique agent, and the strength of the connection 
+between the nodes is the number of communications. So we can see in this
+ instance, agents 0,1 and 2 talk to one another a lot, but less so to 
+other agents.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="" style="top: 0px; display: none;" aria-hidden="true"><h2 id="algebraic-connectivity">Algebraic connectivity</h2>
+<p><img src="ACM_presentation_files/algebraic_connectivity.png" alt=""></p>
+<aside class="notes"><p>So first we have the resultant algebraic 
+connectivity for each of the algorithms social networks. This gives an 
+indication of how many communication events occurred between agents for 
+each algorithm, as well as how dense the communication was, whether each
+ agent gained information from every other agent on the map or just its 
+nearest neighbour.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 69.5px; display: none;" hidden=""><h2 id="footprint-patterns">Footprint patterns</h2>
+<div id="left">
+
+<img src="ACM_presentation_files/CBLS.gif" alt="drawing" width="225">
+<img src="ACM_presentation_files/CGG.gif" alt="drawing" width="225">
+<img src="ACM_presentation_files/CR.gif" alt="drawing" width="225">
+<img src="ACM_presentation_files/DTAP.gif" alt="drawing" width="225">
+</div>
+<div id="right">
+
+<img src="ACM_presentation_files/DTAG.gif" alt="drawing" width="225">
+<img src="ACM_presentation_files/HCR.gif" alt="drawing" width="225">
+<img src="ACM_presentation_files/RAND.gif" alt="drawing" width="225">
+<img src="ACM_presentation_files/SEBS.gif" alt="drawing" width="225">
+</div>
+<aside class="notes"><p>Just for your interest here are the 'footprints'
+ for each of the algorithms taken from some of the runs. Each colour is a
+ distinct agent. Note in DTAP an DTAG, the strongly regioned areas that 
+agents like to patrol, compared to CR or RAND where the colours have 
+much stronger mixing.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 299.5px; display: none;" hidden=""><h2 id="footprint-patterns">Footprint patterns</h2>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="f-score">F-score</h2>
+<p><img src="ACM_presentation_files/f-score_results.png" alt=""></p>
+<aside class="notes"><p>So now to the actual results for the F-scores 
+for each algorithms for the different noise levels. In the second 
+column, I've also added the graph idleness as this is their designed 
+purpose. I have highlighted the top two performing algorithms in each 
+column to show where the trends. For the situations where there is no 
+noise, the algorithms that have the highest amount of communication 
+(thats CR, HPCC and HCR), we have the highest performance. But as the 
+noise level increases, those algorithms perform poorly. The algorithms 
+that have the moderate amount of communication however, SEBS and CBLS, 
+perform strongly.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="f-score">F-score</h2>
+<p><img src="ACM_presentation_files/f-score_results_highlighted.png" alt=""></p>
+<aside class="notes"><p>So now to the actual results for the F-scores 
+for each algorithms for the different noise levels. In the second 
+column, I've also added the graph idleness as this is their designed 
+purpose. I have highlighted the top two performing algorithms in each 
+column to show where the trends. For the situations where there is no 
+noise, the algorithms that have the highest amount of communication 
+(thats CR, HPCC and HCR), we have the highest performance. But as the 
+noise level increases, those algorithms perform poorly. The algorithms 
+that have the moderate amount of communication however, SEBS and CBLS, 
+perform strongly.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h3 id="average-false-and-true-positive">Average False and True Positive</h3>
+<img src="ACM_presentation_files/tp_fp_results.png" alt="drawing" width="700">
+<aside class="notes"><p>A more holistic method of judging the algorithms
+ is to look at the amount of false positives and true positives. Here in
+ blue we have the proportion of runs where the system correctly 
+identified an anomaly, and red are the average number of false positives
+ detected. Along the bottom is the name of each algorithm with their 
+respective performances.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h3 id="average-false-and-true-positive">Average False and True Positive</h3>
+<img src="ACM_presentation_files/tp_fp_results_highlighted.png" alt="drawing" width="700">
+<aside class="notes"><p>The ideal scenario is zero false positives, and 
+100% true positive detection. Note the three top performing algorithms, 
+CGG, CBLS and SEBS as having some of the lowest levels of false 
+positives, and the highest proportion of true positives.</p>
+</aside></section></section><section data-charset="iso-8859-15" style="top: 145.5px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future"><h2 id="discussion">Discussion</h2>
+<ul>
+<li>Moderate connectivity algorithms perform best</li>
+<li>High connectivity algorithms perform worse</li>
+<li>Low connectivity algorithms perform worst</li>
+<li>Exception is CGG algorithm<ul>
+<li>Guaranteed to <em>personally</em> check nodes<aside class="notes"><p>So
+ to summarise the findings, we find are that algorithms with the lowest 
+connectivity, so that's DTAG and DTAP, perform the worst in regard to 
+F-score, the algorithms with the highest connectivity perform slightly 
+better, but the best performing algorithms at overall F-score 
+performance are ones with moderate connectivity. This doesn't hold for a
+ particular algorithm of CGG, which is one of the worst performing for 
+idleness minimization, and we believe this to be due to the intrinsic 
+behaviour of CGG. CGG stands for Cyclic Generic Graphs, which is at its 
+core generating a hamiltonian cycle that the agents patrol around. 
+Because each agent will visit every single node on the graph, they do 
+not <em>just</em> consider the information from their neighbours to 
+judge a node's state. This we believe leads to a minimization of noise 
+propagation throughout the system</p>
+</aside></li>
+</ul>
+</li>
+</ul>
+</section><section data-charset="iso-8859-15" style="top: 143px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future"><h2 id="dirty-laundry">Dirty Laundry</h2>
+<ul>
+<li>F<sub>1</sub>-score is not perfect</li>
+<li>Belief system is not perfect</li>
+<li>Do results hold for number of agents?</li>
+<li>Judging algorithms at a new task</li>
+<li>Communication range and timeout period<aside class="notes"><p>So for
+ these results we limited the scope of what we were investigating, 
+knowing that there were limitations in our approach that we didn't have 
+the bandwidth to investigate. Some of these are the analytical methods 
+that we used, namely the use of F1-score, while it gives an insight into
+ the overall performance of a binary classification (anomaly or no 
+anomaly), perhaps in an instance we care more about the ratio of false 
+NEGATIVES, as that would be a severe scenario, but aren't too concerned 
+about false positives. The number of agents was chosen based on the best
+ performance for idleness minimization with a given map size, while 
+minimizing the number of collisions between agents. 
+ There is also something to be said for judging an algorithms 
+performance for something it wasn't designed for. This is a fair 
+critique, and we saw it more as a challenge to the formulation of the 
+patrolling problem, as opposed to a shortcoming of the algorithms 
+themselves. We are also currently working on the communication range and
+ timeout period, which I will get onto in the next slide.</p>
+</aside></li>
+</ul>
+</section><section data-charset="iso-8859-15" style="top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future"><h2 id="current--future-work">Current &amp; Future Work</h2>
+<ul>
+<li>Investigating variation of communication range and timeout period</li>
+<li>Bayesian belief system &amp; confidence intervals</li>
+<li>Real experiments with RF anomaly<aside class="notes"><p>So like I 
+mentioned, we are currently looking at the influence of communication 
+range and the timeout period on the performance of the algorithms. We 
+chose values for our paper with a valid justification and to limit the 
+scope, but there is work to be done into the optimal values for each 
+algorithm. We are also changing the belief system and communication 
+model, to re-introduce some granularity. We used a simple ternary belief
+ system as we were building from previous work, and we knew that it 
+enabled faster convergence, but we don't assume it is a superior system.
+ With this in mind we are looking to implement a Bayesian belief model 
+in order to arrive at confidence intervals for measurements. We also 
+have a collaboration starting where we will perform real-world 
+experiments trying to detect and localise a radio device hidden 
+somewhere in an environment, which should be interesting.</p>
+</aside></li>
+</ul>
+</section><section data-charset="iso-8859-15" style="top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future"><h2 id="references">References</h2>
+<small>
+
+<ol>
+<li>David Bina Siassipour Portugal. 2013. <em>Effective Cooperation and Scalability in Multi-Robot Teams for Automatic Patrolling of Infrastructures</em>. Ph. D. Dissertation. Universidade de Coimbra, Portugal.</li>
+<li>Michael Crosscombe and Jonathan Lawry. 2017. <em>Exploiting Vagueness for Multi-
+agent Consensus</em>. In Multi-agent and Complex Systems, Quan Bai, Fenghui Ren,
+Katsuhide Fujita, Minjie Zhang, and Takayuki Ito (Eds.). Springer Singapore,
+Singapore, 67-78.</li>
+<li>Adafruit Feather RP2040 with RFM95 LoRa Radio - 915MHz - RadioFruit 
+and STEMMA QT - Attribution-NonCommercial-ShareAlike (CC BY-NC-SA 2.0)</li>
+</ol>
+</small>
+</section><section data-charset="iso-8859-15" style="top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future"><h2 id="questions">Questions?</h2>
+<p>Thankyou!</p>
+<p><a href="mailto:zachary.madin@bristol.ac.uk">zachary.madin@bristol.ac.uk</a></p>
+<p><img src="ACM_presentation_files/paper_qr.png" alt="">
+     
+<img src="ACM_presentation_files/github_qr.png" alt=""></p>
+<aside class="notes"><p>I'll now take questions, and here are some links for my paper and my Github if you want to stay in touch</p>
+</aside></section>
+			</div>
+		<div class="backgrounds"><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background stack future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: none;"></div><aside class="controls" style="display: block;" data-controls-layout="bottom-right" data-controls-back-arrows="faded"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);" class="aria-status" aria-live="polite" aria-atomic="true">Collective
+ Anomaly Perception During Multi-Robot Patrol: Constrained Interactions 
+Can Promote Accurate Consensus Zachary R. Madin - Jonathan Lawry - 
+Edmund R. Hunt University of Bristol 9th April 2024 - 2024 ACM/SIGAPP </div></div>
+
+		<script src="ACM_presentation_files/reveal.js"></script>
+		<script src="ACM_presentation_files/notes.js"></script>
+		<script src="ACM_presentation_files/markdown.js"></script>
+		<script src="ACM_presentation_files/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	<script src="ACM_presentation_files/livereload.js" async="" defer="defer"></script>
+
+
+
+</body></html>
