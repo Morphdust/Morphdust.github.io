@@ -3,6 +3,7 @@ title: "Magnifier Light"
 collection: repair
 permalink: /repair/03-2024-magnifier_light
 venue: "Sparks Repair Cafe"
+Date: "03-2024"
 Problem: "Would not turn on (dead transistor)"
 Solution: "Replace transistor and board"
 ---

@@ -3,6 +3,7 @@ title: "Slow cooker "
 collection: repair
 permalink: /repair/03-2024-slow_cooker
 venue: "Sparks Repair Cafe"
+Date: "03-2024"
 Problem: "Wouldn't turn on or heat up"
 Solution: "Reset thermal fuse"
 ---

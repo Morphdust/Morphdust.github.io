@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ca5d367-1872-474a-8ba0-b069eacb554a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/_includes/archive-repair-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pages/repair.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/repair.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/01-24-portable_projector2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/03-2024-magnifier_light47.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/03-2024-magnifier_light47.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/03-2024-slow_cooker45.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/03-2024-slow_cooker45.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/04-2024-lamp42.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/04-2024-lamp42.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/04-2024-mazzer_grinder30.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/04-2024-mazzer_grinder30.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/04-2024-orbital_sander43.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/04-2024-orbital_sander43.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/05-2023-strimmer12.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/05-2023-strimmer12.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/05-2024-blinds_mechanism&#9;46.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/05-2024-blinds_mechanism&#9;46.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/05-2024-laptop_charger39.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/05-2024-laptop_charger39.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/05-2024-torpedo_timer44.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/05-2024-torpedo_timer44.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/06-2024-coffee_grinder_switch37.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/06-2024-coffee_grinder_switch37.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/06-2024-guitar_case40.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/06-2024-guitar_case40.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/06-2024-kids_car32.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/06-2024-kids_car32.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/06-2024-neon_light41.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/06-2024-neon_light41.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/06-2024-roberts_radio_buck38.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/06-2024-roberts_radio_buck38.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/07-2024-akai_turntable33.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/07-2024-akai_turntable33.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/07-2024-hair_straighteners34.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/07-2024-hair_straighteners34.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/07-2024-kindle36.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/07-2024-kindle36.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/07-2024-koala_light35.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/07-2024-koala_light35.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/08-2024-shaver29.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/08-2024-shaver29.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/08-2024-xbox_one31.md" beforeDir="false" afterPath="$PROJECT_DIR$/_repair/08-2024-xbox_one31.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/08-23-air_fryer1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/8-2024-shaver29.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-IMU10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-amplifier25.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-blinds3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-camera_lens4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-coffee_machine6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-e_bike7.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-e_scooter8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-headphones9.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-kobo_reader11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-macbook13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-magnifier14.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-mains_to_usb20.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-marantz_amplifier15.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-marshall_headphones16.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-microphone17.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-microwave18.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-pa_kit19.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-portable_grinder5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-roberts_radio21.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-roberts_radio22.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-trolley24.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-ultra_vinyl28.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-vacuum26.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-walkman23.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repair/TODO-water_feature27.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/repair_cafe/cafe_pics/cafe_pics_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/repair_cafe/microwave/microwave_2.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Morphdust&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Morphdust/Morphdust.github.io.git&quot;,
+    &quot;accountId&quot;: &quot;3d331920-1731-4ebb-89e7-4e7210f85460&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2hKOJxxDVgVDMqgxpbW0LNofQIX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.repairs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.talks.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/olorin/git/Morphdust.github.io/_includes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_includes" />
+      <recent name="$PROJECT_DIR$/_publications" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="repairs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Morphdust.github.io" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/markdown_generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/markdown_generator/repairs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.repairs" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PY-242.20224.347" />
+        <option value="bundled-python-sdk-c2d6afa66fbe-39cff9de6eef-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.20224.347" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ca5d367-1872-474a-8ba0-b069eacb554a" name="Changes" comment="" />
+      <created>1717339233339</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717339233339</updated>
+      <workItem from="1717339234406" duration="672000" />
+      <workItem from="1717412883903" duration="11000" />
+      <workItem from="1718979759286" duration="892000" />
+      <workItem from="1723047324232" duration="1571000" />
+      <workItem from="1723048969450" duration="53000" />
+      <workItem from="1723049029327" duration="2045000" />
+      <workItem from="1723112498732" duration="9875000" />
+      <workItem from="1723197531733" duration="4000" />
+      <workItem from="1723218383312" duration="4811000" />
+      <workItem from="1723459418596" duration="1202000" />
+      <workItem from="1723477091799" duration="8009000" />
+      <workItem from="1723552332370" duration="6000" />
+      <workItem from="1723563498547" duration="4811000" />
+      <workItem from="1723640292616" duration="8000" />
+      <workItem from="1724079466417" duration="160000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added publications markdown files for papers and posters. Removed default publication pages">
+      <option name="closed" value="true" />
+      <created>1723484579268</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723484579268</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added necessary files for publications (pdfs, presentation etc)">
+      <option name="closed" value="true" />
+      <created>1723484650175</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723484650175</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added repair markdown files generated, some still missing compared to /images/repair_cafe/ folder, TODO check which">
+      <option name="closed" value="true" />
+      <created>1723485094969</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723485094969</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added necessary files for publications (pdfs, presentation etc)" />
+    <MESSAGE value="Added publications markdown files for papers and posters. Removed default publication pages" />
+    <MESSAGE value="Added repair markdown files generated, some still missing compared to /images/repair_cafe/ folder, TODO check which" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added repair markdown files generated, some still missing compared to /images/repair_cafe/ folder, TODO check which" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Morphdust_github_io$repairs.coverage" NAME="repairs Coverage Results" MODIFIED="1723568635471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/markdown_generator" />
+    <SUITE FILE_PATH="coverage/Morphdust_github_io$talks.coverage" NAME="talks Coverage Results" MODIFIED="1723048316259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/markdown_generator" />
+  </component>
+</project>

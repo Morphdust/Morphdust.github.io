@@ -3,6 +3,7 @@ title: "Koala Light "
 collection: repair
 permalink: /repair/07-2024-koala_light
 venue: "Home"
+Date: "07-2024"
 Problem: "Won't turn on"
 Solution: ""Dead battery, re-wire to be plug powered only""
 ---

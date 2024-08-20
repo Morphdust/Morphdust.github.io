@@ -15,7 +15,6 @@ Here I hope to post the repairs and attempted repairs that I work on at the repa
 {% include base_path %}
 
 {% for post in site.repair reversed %}
-  {% include archive-single.html %}
+  {% include archive-repair-list.html %}
 {% endfor %}
-
 

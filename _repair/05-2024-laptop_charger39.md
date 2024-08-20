@@ -3,6 +3,7 @@ title: "Dodgy Charger Port"
 collection: repair
 permalink: /repair/05-2024-laptop_charger
 venue: "Sparks Repair Cafe"
+Date: "05-2024"
 Problem: "Won't charge unless held in position"
 Solution: "Replace charging port"
 ---

@@ -3,6 +3,7 @@ title: "Hand(le) off my guitar! "
 collection: repair
 permalink: /repair/06-2024-guitar_case
 venue: "Sparks Repair Cafe"
+Date: "06-2024"
 Problem: "Handle came off"
 Solution: "Braided steel wire with rivets"
 ---

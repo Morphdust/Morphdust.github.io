@@ -3,6 +3,7 @@ title: "Coffee Switch "
 collection: repair
 permalink: /repair/06-2024-coffee_grinder_switch
 venue: "Sparks Repair Cafe"
+Date: "06-2024"
 Problem: "Button won't work"
 Solution: "Glue flexible plastic"
 ---

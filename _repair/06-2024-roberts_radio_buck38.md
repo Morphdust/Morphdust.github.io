@@ -3,6 +3,7 @@ title: "More Roberts Radios! "
 collection: repair
 permalink: /repair/06-2024-roberts_radio_buck
 venue: "Sparks Repair Cafe"
+Date: "06-2024"
 Problem: ""Won't boot; dead buck controller""
 Solution: "Replace buck with LDO with enable"
 ---

@@ -3,6 +3,7 @@ title: "Torpedo timer (Yes that cool) "
 collection: repair
 permalink: /repair/05-2024-torpedo_timer
 venue: "Sparks Repair Cafe"
+Date: "05-2024"
 Problem: "Wouldn't wind up"
 Solution: "Forward to watch maker contact"
 ---

@@ -3,6 +3,7 @@ title: "Hair Straighteners "
 collection: repair
 permalink: /repair/07-2024-hair_straighteners
 venue: "Sparks Repair Cafe"
+Date: "07-2024"
 Problem: "Intermittently turning off"
 Solution: "Re-solder wire connection"
 ---

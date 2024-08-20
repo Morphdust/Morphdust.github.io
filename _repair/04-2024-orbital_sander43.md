@@ -3,6 +3,7 @@ title: "Gunky bearing "
 collection: repair
 permalink: /repair/04-2024-orbital_sander
 venue: "Sparks Repair Cafe"
+Date: "04-2024"
 Problem: "Wouldn't spin"
 Solution: "Clean main bearing"
 ---

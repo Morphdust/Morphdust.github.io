@@ -3,6 +3,7 @@ title: "Blinds Mechanism"
 collection: repair
 permalink: /repair/05-2024-blinds_mechanism	
 venue: "Sparks Repair Cafe"
+Date: "05-2024"
 Problem: "Jammed mechanism"
 Solution: "Disassembly and removal"
 ---

@@ -3,6 +3,7 @@ title: "PARTY "
 collection: repair
 permalink: /repair/06-2024-neon_light
 venue: "Sparks Repair Cafe"
+Date: "06-2024"
 Problem: "Won't turn on"
 Solution: "Replace transistor"
 ---

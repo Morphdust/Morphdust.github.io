@@ -3,6 +3,7 @@ title: "Mazzer Burrs "
 collection: repair
 permalink: /repair/04-2024-mazzer_grinder
 venue: "Home"
+Date: "04-2024"
 Problem: "Burrs hadn't been used for a while and collected moisture and started to rust"
 Solution: ""Rust remover, scrubbing, washing, and coating in coffee oils""
 ---

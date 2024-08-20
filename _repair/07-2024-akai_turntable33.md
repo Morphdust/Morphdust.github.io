@@ -3,6 +3,7 @@ title: "Akai Turntable "
 collection: repair
 permalink: /repair/07-2024-akai_turntable
 venue: "Sparks Repair Cafe"
+Date: "07-2024"
 Problem: "Can't sync direct drive "
 Solution: "Switch cleaner on potentiometers"
 ---
